@@ -63,8 +63,6 @@ bool chargerGrille(t_grille grille)
     printf("Nom du fichier : ");
     scanf("%s", nomFichier);
 
-
-
     FILE *f;
     f = fopen(nomFichier, "rb");
 
@@ -246,6 +244,11 @@ bool grilleComplete(t_grille grille)
 */
 bool possible(t_grille grille, int numLigne, int numColone, int valeur)
 {
+    if (valeur == 0)
+    {
+        return true;
+    }
+
     bool peutInserer = true;
     int i, j;
     int iMax, jMax;
