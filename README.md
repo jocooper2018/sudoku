@@ -11,24 +11,20 @@ Vérifier que tous les fichiers sources sont présent :
 ## 2 - Compilation
 
 ### Linux
-Ouvrez un terminal dans le répertoire qui contient le code source et
-exécutez une de ces deux commande en fonction de votre compilateur :
-- `cc main.c procedures.c -o sudoku.out -Wall`
-- `gcc main.c procedures.c -o sudoku.out -Wall`
+Ouvrez un terminal dans le répertoire racine du projet et exécutez cette commande :
+- `bash build.bat`
 
 ### Windows
 Ouvrez une invite de comande (`cmd`) ou Windows PowerShell dans le 
-dossier qui contient le code source et exécutez une de ces deux 
-commande en fonction de votre compilateur :
-- `cc main.c procedures.c -o sudoku.exe -Wall`
-- `gcc main.c procedures.c -o sudoku.exe -Wall`
+dossier racine du projet et exécutez cette commande :
+- `.\build.bat`
 
 ## 3 - Exécusion du programme
 
 ### Linux
-Ouvrez un terminal dans le répertoire qui contient l'executable (`sudoku.out`)
+Ouvrez un terminal dans le répertoire qui contient l'executable (`sudoku`)
 et executez cette commande :
-- `./sudoku.out`
+- `./sudoku`
 
 ### Windows
 Ouvrez une invite de comande (`cmd`) ou Windows PowerShell dans le 
