@@ -53,11 +53,14 @@ bool chargerGrille(t_grille grille)
 {
     bool fileLoadSuccess;
 
-    int grilleTmp[TAILLE_GRILLE][TAILLE_GRILLE];
+    int valTemp;
+    int numLigne = 0;
+    int numCol = 0;
+    int i = 0;
     // int numeroGrille;
 
     char nomFichier[30];
-    printf("Entrez le numero de la grille : ");
+    printf("Nom du fichier : ");
     scanf("%s", nomFichier);
 
 
@@ -68,31 +71,34 @@ bool chargerGrille(t_grille grille)
     if (f == NULL)
     {
         printf("\n ERREUR sur le fichier %s\n", nomFichier);
-        fclose(f);
         fileLoadSuccess = false;
     } 
     else 
     {
-        fread(grilleTmp, sizeof(int), TAILLE_GRILLE*TAILLE_GRILLE, f);
-        fclose(f);
-
-        for (int numLigne = 0; numLigne < TAILLE_GRILLE; numLigne++)
+        fileLoadSuccess = true;
+        while (fileLoadSuccess && !feof(f) && 
+        (i < (TAILLE_GRILLE * TAILLE_GRILLE)))
         {
-            for (int numCol = 0; numCol < TAILLE_GRILLE; numCol++)
-            {
-                grille[numLigne][numCol].valeur = grilleTmp[numLigne][numCol];
-                if (grille[numLigne][numCol].valeur == 0)
-                {
-                    grille[numLigne][numCol].depart = false;
-                }
-                else
-                {
-                    grille[numLigne][numCol].depart = true;
-                }
+            fread(&valTemp, sizeof(int), 1, f);
+            fileLoadSuccess = valeurValide(valTemp);
+            
+            grille[numLigne][numCol].valeur = valTemp;
+            grille[numLigne][numCol].depart = (valTemp != 0);
 
-                fileLoadSuccess = valeurValide(grilleTmp[numLigne][numCol]);
+            numCol++;
+            if (numCol >= TAILLE_GRILLE)
+            {
+                numCol = 0;
+                numLigne++;
             }
+            i++;
         }
+        
+    }
+
+    if (fclose(f) != 0)
+    {
+        fileLoadSuccess = false;
     }
 
     return fileLoadSuccess;

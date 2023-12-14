@@ -18,6 +18,7 @@
     bool chargerGrille(t_grille grille);
     bool possible(t_grille grille, int numLigne, int numColone, int valeur);
     bool grilleComplete(t_grille grille);
+    bool valeurValide(int valeur);
 
 #endif
 
