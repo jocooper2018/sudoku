@@ -1,12 +1,12 @@
-# S1.01 - SUDOKU
+# SUDOKU
 
 ## 1 - Avant de compiler
 Vérifier que tous les fichiers sources sont présent :
-- `main.c`
-- `procedures.c`
-- `constante.h`
-- `types.h`
-- `prototypes.h`
+- `sources/main.c`
+- `sources/procedures.c`
+- `includes/constante.h`
+- `includes/types.h`
+- `includes/prototypes.h`
 
 ## 2 - Compilation
 
