@@ -178,7 +178,7 @@ void saisir(int *valeur)
     char ch[3];
     int x = -1;
 
-    while ((x < 0) && (x > TAILLE_GRILLE))
+    while ((x < 0) || (x > TAILLE_GRILLE))
     {
         scanf("%s", ch);
         while (sscanf(ch, "%d", &x) == 0)
