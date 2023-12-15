@@ -1,1 +1,1 @@
-gcc sources/main.c sources/procedures.c -o builds/sudoku -Wall -Werror
+cc sources/main.c sources/procedures.c -o builds/sudoku -Wall -Werror
