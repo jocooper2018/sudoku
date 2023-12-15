@@ -57,7 +57,6 @@ de la colonne de la case, séparé par un espace, puis apuyez sur `Entrer`.
 Si la case que vous avez entrez est valide, le programme vous demandera quel
 nombre vous souhaitez insérer.
 
-Exemple :
 ```
 Indice de la case (ligne colonne) : 1 2
 Valeur a inserer : 2
@@ -67,7 +66,6 @@ Si vous vous rendez compte que vous avez entrez le mauvais nombre dans une
 case, vous pouvez le changer (à condition qu'il ne s'agisse pas du case de 
 départ) en entrant les coordonnées de celle-ci puis la nouvelle valeur :
 
-Exemple :
 ```
 Indice de la case (ligne colonne) : 1 2
 Valeur a inserer : 5
@@ -75,7 +73,6 @@ Valeur a inserer : 5
 
 Vous pouvez également enlever un nombre en entrant la valeur `0`.
 
-Exemple :
 ```
 Indice de la case (ligne colonne) : 1 2
 Valeur a inserer : 0
